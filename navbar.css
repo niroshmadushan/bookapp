@@ -1,0 +1,81 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #1a237e; /* Dark blue background for the navbar */
+    color: white; /* White text for the navbar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    left: 0; /* Ensure the navbar sticks to the left edge */
+    right: 0; /* Ensure the navbar stretches to the right edge */
+    z-index: 1000; /* Ensure navbar is above other elements */
+    width: calc(100% - 40px); /* Full width with a margin on both sides */ /* Adjust margin */
+     /* Rounded corners */
+    width: 98.5%;
+}
+
+/* Navbar Brand (left side) */
+.navbar .navbar-brand {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Navbar Links (right side) */
+.navbar .navbar-links {
+    display: flex; /* Flexbox for links */
+    gap: 15px; /* Space between buttons */
+}
+
+/* Navbar Links - Admin Links */
+.navbar .admin-links {
+    display: flex; /* Flexbox for links */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Navbar Button Styles */
+.navbar .navbar-links button {
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    padding: 10px 15px; /* Add some padding */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Center icon and text */
+    gap: 5px; /* Space between icon and text */
+    text-transform: none; /* Don't uppercase text */
+}
+
+/* Navbar Button Hover Effect */
+.navbar .navbar-links button:hover {
+    background-color: #3949ab; /* Slightly lighter blue on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Logout Button Specific Styles */
+.navbar #logoutBtn {
+    background-color: #f44336; /* Red background for the logout button */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Logout Button Hover Effect */
+.navbar #logoutBtn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Responsive Navbar (if needed) */
+@media (max-width: 768px) {
+    .navbar .navbar-links {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Space between buttons */
+        width: 100%; /* Full width on small screens */
+    }
+
+    .navbar .admin-links {
+        flex-direction: column; /* Stack admin links vertically */
+        gap: 10px; /* Space between buttons */
+    }
+}
